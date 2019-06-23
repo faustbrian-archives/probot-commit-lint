@@ -1,7 +1,7 @@
 {
 	"name": "@botamic/commit-lint",
 	"version": "1.0.0",
-	"description": "A GitHub App built with Probot that welcomes first-time contributors.",
+	"description": "A GitHub App built with Probot that lints commit messages.",
 	"keywords": [
 		"github",
 		"probot",

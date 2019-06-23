@@ -1,7 +1,7 @@
 FROM node:alpine
 
 LABEL "com.github.actions.name"="commit-lint"
-LABEL "com.github.actions.description"="A GitHub App built with Probot that welcomes first-time contributors."
+LABEL "com.github.actions.description"="A GitHub App built with Probot that lints commit messages."
 LABEL "com.github.actions.icon"="code"
 LABEL "com.github.actions.color"="gray-dark"
 

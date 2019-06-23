@@ -1,6 +1,6 @@
 # commit-lint
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that welcomes first-time contributors.
+> A GitHub App built with [Probot](https://github.com/probot/probot) that lints commit messages.
 
 ## Setup
 
