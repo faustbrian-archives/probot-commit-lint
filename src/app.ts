@@ -88,20 +88,20 @@ export const performLint = async (context: Context): Promise<void> => {
 
 				if (previousComment) {
 					await context.github.issues.updateComment({
-						...pullRequest,
+						...repo,
 						comment_id: previousComment.id,
 						body: message,
 					});
 				} else {
 					await context.github.issues.createComment({
-						...context.repo({ issue_number: context.issue().number }),
+						...issue,
 						body: message,
 					});
 				}
 			} else {
 				if (previousComment) {
 					await context.github.issues.deleteComment({
-						...pullRequest,
+						...repo,
 						comment_id: previousComment.id,
 					});
 				}
