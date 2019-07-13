@@ -63,7 +63,7 @@
 	"dependencies": {
 		"@commitlint/config-conventional": "^8.0.0",
 		"@commitlint/core": "^8.0.0",
-		"probot": "^9.2.16",
+		"probot": "^9.2.19",
 		"probot-config": "^1.1.0"
 	},
 	"devDependencies": {
