@@ -61,6 +61,7 @@
 		"verbose": true
 	},
 	"dependencies": {
+		"@botamic/toolkit": "^0.1.0",
 		"@commitlint/config-conventional": "^8.0.0",
 		"@commitlint/core": "^8.0.0",
 		"probot": "^9.2.19",

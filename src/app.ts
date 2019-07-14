@@ -1,3 +1,4 @@
+import { getBotComment } from "@botamic/toolkit";
 import { lint, load } from "@commitlint/core";
 import { Context, Octokit } from "probot";
 
@@ -79,9 +80,10 @@ export const performLint = async (context: Context): Promise<void> => {
 				description: `Found ${countErrors} problems, ${countWarnings} warnings`,
 			});
 
-			const previousComment: Octokit.IssuesListCommentsResponseItem = (await context.github.issues.listComments(
-				issue,
-			)).data.find(comment => comment.user.login === `${process.env.APP_NAME}[bot]`);
+			const previousComment: Octokit.IssuesListCommentsResponseItem | undefined = await getBotComment(
+				context,
+				context.issue().number,
+			);
 
 			if (countErrors || countWarnings) {
 				const message: string = formatCommits(report.commits, countErrors, countWarnings);
